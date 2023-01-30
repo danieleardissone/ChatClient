@@ -20,6 +20,10 @@ To connect to the server, the client opens a TCP connection on port 10000.
 If the connection opens, it creates a thread timer that runs a method every 500 milliseconds to check if there are new messages to receive.
 Network connection and interactions with server is managed by the ```TcpNetworkService```, that is injected when the client starts.
 
+![image](https://user-images.githubusercontent.com/20296719/215570663-dc8b845c-90c9-4a97-962c-2e32141810fc.png)
+
+![PagoPaChatClient](https://user-images.githubusercontent.com/20296719/215570343-41e40add-b8e0-4569-b3d4-27aa49fd20d9.PNG)
+
 # Chat Server
 A simple Node.js server that listen on TCP port 10000 using net module.
 It's available at https://gist.github.com/danieleardissone/02e4a5481c638c29c818ae9137317134
