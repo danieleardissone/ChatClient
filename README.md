@@ -24,6 +24,15 @@ Network connection and interactions with server is managed by the ```TcpNetworkS
 
 ![PagoPaChatClient](https://user-images.githubusercontent.com/20296719/215570343-41e40add-b8e0-4569-b3d4-27aa49fd20d9.PNG)
 
+I defined a simple chat protocol to identify different kind of messages, two in this case.
+* Connection message: is the one sent when a new user is joining the chat
+* Standard message: the type that represents every chat message sent by connected users
+
+Connection messages are identified by the prefix ```conn:``` while the chat messages simply by the prefix ```msg:```
+
+Every message consists of ```prefix:user|message```.
+In this way the server can properly reply to clients and decide to broadcast a message to all connected users of just notify something to the sender.
+
 # Chat Server
 A simple Node.js server that listen on TCP port 10000 using net module.
 It's available at https://gist.github.com/danieleardissone/02e4a5481c638c29c818ae9137317134
