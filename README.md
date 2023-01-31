@@ -31,7 +31,7 @@ I defined a simple chat protocol to identify different kind of messages, two in 
 Connection messages are identified by the prefix ```conn:``` while the chat messages simply by the prefix ```msg:```
 
 Every message consists of ```prefix:user|message```.
-In this way the server can properly reply to clients and decide to broadcast a message to all connected users of just notify something to the sender.
+In this way the server can properly reply to clients and decide to broadcast a message to all connected users or just notify something to the sender.
 
 # Chat Server
 A simple Node.js server that listen on TCP port 10000 using net module.
