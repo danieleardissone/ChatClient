@@ -15,13 +15,13 @@ namespace ChatClient
         #endregion
 
         #region Private properties
-        TcpNetworkService _tcpNetworkSvc;
+        ITcpNetworkService _tcpNetworkSvc;
         User? _currentUser;
         string? _readData;
         System.Threading.Timer? _timerThread;
         #endregion
 
-        public ChatForm(TcpNetworkService tcpNetworkService)
+        public ChatForm(ITcpNetworkService tcpNetworkService)
         {
             InitializeComponent();
 
